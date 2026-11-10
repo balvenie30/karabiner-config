@@ -1,0 +1,25 @@
+{
+  "description": "Right Command tap to toggle input source natively (holding disabled)",
+  "manipulators": [
+    {
+      "from": {
+        "key_code": "right_command",
+        "modifiers": {
+          "optional": [
+            "any"
+          ]
+        }
+      },
+      "to": [],
+      "to_if_alone": [
+        {
+          "key_code": "fn"
+        }
+      ],
+      "parameters": {
+        "basic.to_if_alone_timeout_milliseconds": 250
+      },
+      "type": "basic"
+    }
+  ]
+}
