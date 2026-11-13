@@ -1,25 +1,19 @@
 {
-  "description": "Right Command tap to toggle input source natively (holding disabled)",
-  "manipulators": [
-    {
-      "from": {
-        "key_code": "right_command",
-        "modifiers": {
-          "optional": [
-            "any"
-          ]
-        }
-      },
-      "to": [],
-      "to_if_alone": [
+    "description": "Right Command to instantly toggle input source (Command holding disabled)",
+    "manipulators": [
         {
-          "key_code": "fn"
+            "from": {
+                "key_code": "right_command",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to": [
+                {
+                    "halt": true,
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control"]
+                }
+            ],
+            "type": "basic"
         }
-      ],
-      "parameters": {
-        "basic.to_if_alone_timeout_milliseconds": 250
-      },
-      "type": "basic"
-    }
-  ]
+    ]
 }
